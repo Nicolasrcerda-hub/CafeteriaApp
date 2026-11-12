@@ -1,0 +1,42 @@
+<Window
+    x:Class="CafeteriaApp.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CafeteriaApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#3E2723" RequestedTheme="Light">
+        <Border Background="#FFF8E1" CornerRadius="12" Padding="24"
+                Width="420" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Spacing="12">
+                <TextBlock Text="☕ Cafetería Hero´s" FontSize="26" FontWeight="Bold"
+                           Foreground="#4E342E" HorizontalAlignment="Center"/>
+
+                <TextBox x:Name="txtNombre" Header="Nombre del cliente"
+                         PlaceholderText="Ej. Juan Pérez"/>
+
+                <ComboBox x:Name="cmbProductos" Header="Producto"
+                          SelectedIndex="0" HorizontalAlignment="Stretch">
+                    <ComboBoxItem Content="Café Americano - $35"/>
+                    <ComboBoxItem Content="Panini - $55"/>
+                    <ComboBoxItem Content="Jugo - $30"/>
+                </ComboBox>
+
+                <TextBox x:Name="txtCantidad" Header="Cantidad"
+                         PlaceholderText="Ej. 2"/>
+
+                <Button x:Name="btnGenerar" Content="Generar ticket"
+                        Click="btnGenerar_Click" HorizontalAlignment="Stretch"
+                        Background="#6D4C41" Foreground="White"
+                        FontWeight="SemiBold" Padding="10"/>
+
+                <Border Background="White" CornerRadius="8" Padding="12">
+                    <TextBlock x:Name="txtResultado" FontFamily="Consolas"
+                               TextWrapping="Wrap" Foreground="#3E2723"/>
+                </Border>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CafeteriaApp (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "CafeteriaApp (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
